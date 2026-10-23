@@ -89,4 +89,4 @@ try:
     print("Taisarvuline osa:", Int(tulemus))
     #int(3.75)=3 teine variant täisosa leidmiseks on kasutada // jagam print(®Jääk:", sunma % jagaja)
 except ValueError:
-    print("Palun sisesta kehtiv number.")
+    print("Palun sisesta kehtiv number."
