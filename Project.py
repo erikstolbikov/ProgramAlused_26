@@ -33,6 +33,7 @@ print(f"Pikkus: {pikkus}, tüüp:{type(pikkus)}")
 print(f"Käib koolis:{kas_käib_koolis}, tüüp:{type(kas_käib_koolis)}")
 
 #Ülesanne 3
+import math
 # Kirjuta enda koodis laual olevate kommide arv muutujasse
 # (kommide arv on juhuslik).
 # Seejärel kuva muutujas olev kommide arv ekraanile kasutades print()
@@ -46,14 +47,14 @@ kommide_arv=int(input("Kommide arv: "))
 print(f"Laud on {kommide_arv} kommi.")
 kommid=int(input("Mitu kommi soovid ära võtta? "))
 kommide_arv -= kommid
-print(f"Laid on nüüd {komide_arv} kommi.")
+print(f"Laid on nüüd {kommide_arv} kommi.")
 
 #Ülesanne 4
 #Puu läbimõõdu arvutamine
 # kirjuta programm, mis küsib kasutaja käest puu ümbermõõdu
 # ning teatab selle peale puu läbimõõdu.
 ümbermõõt=float(input("Sisesta puu ümbermõõt: "))
-läbimõõt=ümbermõõt/pi
+läbimõõt=ümbermõõt/math.pi
 print(f"Puu läbimõõt on {läbimõõt}.")
 
 #Ülesanne 5
@@ -63,5 +64,28 @@ print(f"Puu läbimõõt on {läbimõõt}.")
 N=float(input("Sisesta ristküliku esimene külg (N): "))
 M=float(input("Sisesta ristküliku teine külg (M): "))
 
-diagonaal=round(sqrt(N**2 + M**2), 1) # sqrt() math moodulist
+diagonaal=round(math.sqrt(N**2 + M**2), 1) # sqrt() math moodulist
 print(f"Ristküliku diagonaal on {diagonaal}.")
+except ValueError:
+print("Palun sisesta kehtiv number.")
+#Ülesanne 7
+#Koostada programm, mis arvutab aritmeetilise keskmise
+# suvalisest etteantud 5 täis arvust.
+#Leia nende arvude summa, jagatuna kasutaja poolt sisestatud arvuga,
+#täisarvuline osa ja jääk.
+arv1=randint(1, 100)
+arv2=randint(1, 100)
+arv3=randint(1, 100)
+arv4=randint(1, 100)
+arv5=randint(1, 100)
+summa=arv1+arv2+arv3+arv4+arv5
+keskmine=summa/5
+print(f"summa: {summa}, Keskmine: {keskmine}")
+try:
+    Jagaja=int(input("Sisesta arv, millega jagada: "))
+    tulemus=sumna/jagaja
+    print("Tulenus:", tulemus) #tulemus=3.75
+    print("Taisarvuline osa:", Int(tulemus))
+    #int(3.75)=3 teine variant täisosa leidmiseks on kasutada // jagam print(®Jääk:", sunma % jagaja)
+except ValueError:
+    print("Palun sisesta kehtiv number.")
