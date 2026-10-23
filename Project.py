@@ -13,3 +13,55 @@ try:
     print(f"Tere, maailm! Tervitan sind {nimi}! sa oled {vanus} aastat vana.")
 except ValueError:
     print("Palun sisesta kehtiv number vanuse jaoks.")
+
+    #ülesanne 2
+# on järnevad muutujad:
+#a) vanus = 18
+#b) eesnimi = "jaak"
+#c) pikkus = 16.5
+#d) kas_käib_koolis = True
+# mis võimalus veel peale True oleks viimast muutujat väärtustada?
+# kuidas võiks nende muutujate vääartusi koodis kontrollida?
+# kirjuta kood tüüpide kontrollimiseks.
+vanus=18 #int-täisarv
+eesnimi="jaak" #str-sõne
+pikkus=16.5 #float-kümnendaurd!
+kas_käib_koolis=True #bool-töeväärtus
+print(f"Vanus:{vanus}, tüüp:{type(vanus)}")
+print(f"Eesnim:{eesnimi}tüüp:{type(eesnimi)}")
+print(f"Pikkus: {pikkus}, tüüp:{type(pikkus)}")
+print(f"Käib koolis:{kas_käib_koolis}, tüüp:{type(kas_käib_koolis)}")
+
+#Ülesanne 3
+# Kirjuta enda koodis laual olevate kommide arv muutujasse
+# (kommide arv on juhuslik).
+# Seejärel kuva muutujas olev kommide arv ekraanile kasutades print()
+# Küsi kasutajalt sisendit, mitu kommi ta soovib laualt ära võtta.
+# Eemalda soovitud kommide arv laual olevate kommide arvust
+# ja kuva ekraanile.
+# kui palju komme laual nüüd on.
+from random import * #randit
+kommide_arv=randint(1, 100) #int(input("kommide arv: "))
+kommide_arv=int(input("Kommide arv: "))
+print(f"Laud on {kommide_arv} kommi.")
+kommid=int(input("Mitu kommi soovid ära võtta? "))
+kommide_arv -= kommid
+print(f"Laid on nüüd {komide_arv} kommi.")
+
+#Ülesanne 4
+#Puu läbimõõdu arvutamine
+# kirjuta programm, mis küsib kasutaja käest puu ümbermõõdu
+# ning teatab selle peale puu läbimõõdu.
+ümbermõõt=float(input("Sisesta puu ümbermõõt: "))
+läbimõõt=ümbermõõt/pi
+print(f"Puu läbimõõt on {läbimõõt}.")
+
+#Ülesanne 5
+#Arvutage Pythoni käsureal, kui pikk on ristkülikukujulise
+#maatüki diagonaal,
+#mille mõõtmed on Nm x Mm. N ja M küsi kasutajalt.
+N=float(input("Sisesta ristküliku esimene külg (N): "))
+M=float(input("Sisesta ristküliku teine külg (M): "))
+
+diagonaal=round(sqrt(N**2 + M**2), 1) # sqrt() math moodulist
+print(f"Ristküliku diagonaal on {diagonaal}.")
