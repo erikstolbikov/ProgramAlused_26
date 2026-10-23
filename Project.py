@@ -68,6 +68,7 @@ diagonaal=round(math.sqrt(N**2 + M**2), 1) # sqrt() math moodulist
 print(f"Ristküliku diagonaal on {diagonaal}.")
 except ValueError:
 print("Palun sisesta kehtiv number.")
+
 #Ülesanne 7
 #Koostada programm, mis arvutab aritmeetilise keskmise
 # suvalisest etteantud 5 täis arvust.
