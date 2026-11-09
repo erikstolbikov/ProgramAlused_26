@@ -1,5 +1,43 @@
 # Lihtne 1t
 
+# Nime kontrollimine
+
+nimi = input("Sisesta nimi: ")
+
+print("Ainult tähed:", nimi.isalpha())
+print("Suurtähtedega:", nimi.isupper())
+print("Algab suurtähega:", nimi.istitle())
+
+if nimi.isalpha() and nimi.istitle():
+    print("Nimi sobib.")
+
+    # if on if-i sees
+
+    try:
+        vanus = int(input("Vanus: "))
+
+        if vanus >= 18:
+            juhiluba = input("Kas sul on juhiluba? (jah/ei) ")
+
+            if juhiluba.lower() == "jah":
+                print("Võid autot juhtida.")
+            elif juhiluba.lower() == "ei":
+                print("Kõigepealt tee juhiload.")
+            else:
+                print("Palun vasta jah või ei.")
+
+        else:
+            print("Oled autojuhtimiseks liiga noor.")
+
+    except ValueError:
+        print("Palun sisesta kehtiv täisarv.")
+
+else:
+    print("Nimes tohib olla ainult tähti ja nimi peab algama suure tähega!")
+
+
+# Lihtne 1t
+
 x = -5  # testimiseks kirjuta siia mõni arv
 
 try:
@@ -17,12 +55,16 @@ except ValueError:
 
 # if-else
 
-x = int(input("Sisesta arv: "))
+try:
+    x = int(input("Sisesta arv: "))
 
-if x == 1:
-    print("Õige")
-else:
-    print("Vale")
+    if x == 1:
+        print("Õige")
+    else:
+        print("Vale")
+
+except ValueError:
+    print("Palun sisesta kehtiv täisarv.")
 
 
 vastus = input("Kas soovid jätkata? (jah/ei) ")
@@ -46,23 +88,6 @@ try:
         print("OK")
     else:
         print("Palju")
-
-except ValueError:
-    print("Palun sisesta kehtiv täisarv.")
-
-# if on if´i sees
-
-try:
-    vanus = int(input("Vanus: "))
-    if vanus >= 18:
-        juhiluba = input("Kas sul on juhiluba? (jah/ei) ")
-
-        if juhiluba.lower() == "jah":
-            print("Võid autot juhtida.")
-        else:
-            print("Kõigepealt tee juhiload.")
-    else:
-        print("Oled autojuhtimiseks liiga noor.")
 
 except ValueError:
     print("Palun sisesta kehtiv täisarv.")
